@@ -17,10 +17,14 @@
     border-radius: 5px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
     padding: 5%;
+    color: #333;
     background: #0062cc;
 }
 .login-form-2 h3{
     text-align: center;
+    color: #fff;
+}
+.login-form-2 a{
     color: #fff;
 }
 .login-container form{
@@ -51,4 +55,8 @@
     color: #0062cc;
     font-weight: 600;
     text-decoration: none;
+}
+
+p {
+    margin: 0;
 }
