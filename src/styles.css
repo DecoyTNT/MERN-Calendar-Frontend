@@ -80,3 +80,11 @@ html, body {
     position: fixed;
     left: 25px;
 }
+.fab-info {
+    bottom: 25px;
+    /* font-size: 30px; */
+    left: 30%;
+    right: 30%;
+    padding: 10px;
+    position: fixed;
+}

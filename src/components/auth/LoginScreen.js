@@ -23,7 +23,8 @@ const LoginScreen = () => {
                 .required('El password es obligatorio')
                 .min(6, 'El password debe contener al menos 6 carácteres')
         }),
-        onSubmit: () => {
+        validateOnChange: false,
+        onSubmit: async () => {
             dispatch(startLogin(email, password));
             dispatch(startChecking());
         }
@@ -38,21 +39,33 @@ const LoginScreen = () => {
                 <form
                     onSubmit={formik.handleSubmit}
                 >
+                    {formik.errors.email &&
+                        (
+                            <div className="alert bg-danger" role="alert">
+                                <p className="font-weight-bold text-white">{formik.errors.email}</p>
+                            </div>
+                        )}
                     <div className="form-group">
                         <input
                             type="email"
                             className="form-control"
-                            placeholder="Correo"
+                            placeholder="Introduce tu correo"
                             name="email"
                             value={email}
                             onChange={formik.handleChange}
                         />
                     </div>
+                    {formik.errors.password &&
+                        (
+                            <div className="alert bg-danger" role="alert">
+                                <p className="font-weight-bold text-white">{formik.errors.password}</p>
+                            </div>
+                        )}
                     <div className="form-group">
                         <input
                             type="password"
                             className="form-control"
-                            placeholder="Password"
+                            placeholder="Introduce tu password"
                             name="password"
                             value={password}
                             onChange={formik.handleChange}

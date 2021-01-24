@@ -56,7 +56,7 @@ const RegisterScreen = () => {
                         <input
                             type="text"
                             className="form-control"
-                            placeholder="Nombre"
+                            placeholder="Introduce tu nombre"
                             name="name"
                             value={name}
                             onChange={formik.handleChange}
@@ -72,7 +72,7 @@ const RegisterScreen = () => {
                         <input
                             type="email"
                             className="form-control"
-                            placeholder="Correo"
+                            placeholder="Introduce tu correo"
                             name="email"
                             value={email}
                             onChange={formik.handleChange}
@@ -88,7 +88,7 @@ const RegisterScreen = () => {
                         <input
                             type="password"
                             className="form-control"
-                            placeholder="Password"
+                            placeholder="Introduce tu password"
                             name="password"
                             value={password}
                             onChange={formik.handleChange}
@@ -104,7 +104,7 @@ const RegisterScreen = () => {
                         <input
                             type="password"
                             className="form-control"
-                            placeholder="Repite el password"
+                            placeholder="Vuelve a introducir tu password"
                             name="password2"
                             value={password2}
                             onChange={formik.handleChange}

@@ -5,7 +5,7 @@ import DateTimePicker from 'react-datetime-picker';
 import Swal from 'sweetalert2';
 import { uiCloseModal } from '../../actions/ui';
 import { useDispatch, useSelector } from 'react-redux';
-import { eventAddNew, eventClearActiveEvent, eventUpdated } from './../../actions/events';
+import { eventClearActiveEvent, eventStartAddNew, eventStartUpdate } from './../../actions/events';
 
 const customStyles = {
     content: {
@@ -48,6 +48,7 @@ const CalendarModal = () => {
             setDateStart(activeEvent.start);
             setDateEnd(activeEvent.end);
         } else if (startEvent) {
+            setFormValues(startEvent);
             setDateStart(startEvent.start);
             setDateEnd(startEvent.end);
         } else {
@@ -103,16 +104,9 @@ const CalendarModal = () => {
 
         // TODO: grabar en base de datos
         if (activeEvent) {
-            dispatch(eventUpdated(formValues));
+            dispatch(eventStartUpdate(formValues));
         } else {
-            dispatch(eventAddNew({
-                ...formValues,
-                id: new Date().getTime(),
-                user: {
-                    _id: '123',
-                    name: 'Jorge'
-                }
-            }));
+            dispatch(eventStartAddNew(formValues));
         }
 
         setTitleValid(true);

@@ -7,3 +7,7 @@ export const uiOpenModal = () => ({
 export const uiCloseModal = () => ({
     type: types.uiCloseModal
 });
+
+export const uiEventsUser = () => ({
+    type: types.uiEventsUser
+});
