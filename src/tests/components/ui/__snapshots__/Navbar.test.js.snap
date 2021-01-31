@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <Navbar /> Debe mostrarse correctamente 1`] = `
+<div>
+  <div
+    className="navbar navbar-dark bg-dark mb-4"
+  >
+    <span
+      className="navbar-brand"
+    >
+      Test
+    </span>
+    <button
+      className="btn btn-outline-info"
+      onClick={[Function]}
+    >
+      <span
+        className="span-eventsuser"
+      >
+        Ver todos los eventos
+      </span>
+    </button>
+    <button
+      className="btn btn-outline-danger"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-sign-out-alt"
+      />
+      <span>
+         Salir
+      </span>
+    </button>
+  </div>
+</div>
+`;

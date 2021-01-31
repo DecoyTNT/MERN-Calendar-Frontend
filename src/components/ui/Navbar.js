@@ -30,7 +30,7 @@ const Navbar = () => {
                 className="btn btn-outline-info"
                 onClick={handleChange}
             >
-                <span>{eventsUser ? 'Ver todos los eventos' : 'Ver tus eventos'}</span>
+                <span className="span-eventsuser">{eventsUser ? 'Ver todos los eventos' : 'Ver tus eventos'}</span>
             </button>
 
             <button

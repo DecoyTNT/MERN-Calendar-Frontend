@@ -36,11 +36,12 @@ export const startRegister = (name, email, password) => {
                 dispatch(login(user));
             }
         } catch (error) {
-            Swal.fire(
-                'Error',
-                error.response.data.msg,
-                'error'
-            );
+            console.log(error);
+            // Swal.fire(
+            //     'Error',
+            //     error.response.data.msg,
+            //     'error'
+            // );
         }
     }
 }
